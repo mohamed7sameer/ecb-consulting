@@ -1,0 +1,33 @@
+extends includes/layout.pug
+block content
+  //- section(class='po-portfolio')
+
+  ul.nav.nav-portfolio
+    each val in navPorFolio
+      li.nav-item(class=val[1])
+        button.nav-link(href="#" data-filter=val[2])=val[0]
+    
+
+  
+  section(class="portfolio-co-cards")
+    .container
+      .row.co-grid
+        each val in dataPortfolio
+          +moCom5(
+            val.title,
+            val.location,
+            val.img,
+            '#',
+            'filter-item',
+            val.filter
+          )
+          
+    
+  
+block append scripts
+  script(src="js/libs/isotope.pkgd.min.js")
+  script.
+    onload = function(){
+      sortPorfolio()
+    }
+    

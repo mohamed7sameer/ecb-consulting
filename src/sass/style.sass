@@ -1,0 +1,450 @@
+@import "_variable.sass"
+
+@import "_mixin.sass"
+
+// html,body
+//     padding: 0px
+//     margin: 0px
+
+
+
+// @import "_mixin.sass"
+
+// @import "_pages.sass"
+
+@import '_hotspot.sass'
+
+.simplebar-content-wrapper
+    overflow: auto
+nav#top-nav
+    background: transparent
+    .navbar-brand
+        width: 190px
+        @media screen and ( max-width: $xs)
+            width: 90px
+            
+    .navbar-toggler
+    .collapse.navbar-collapse#navbarSupportedContent
+        .navbar-nav
+            .nav-item
+                border-bottom: 2px solid transparent
+                &:hover
+                    border-bottom: 2px solid $color-red
+                .nav-link
+                    color: #000
+                    // font-weight: 500
+                    font-size: 15px
+                    &.active
+            .nav-item.dropdown
+                .dropdown-toggle
+                    &::after
+                        content: ''
+                        display: none
+                .dropdown-menu
+                    width: 210px
+                    font-size: 14px
+                    @media screen and ( max-width:  $md)
+                        width: 100%
+                    li
+                        .dropdown-item
+
+
+
+
+
+
+
+
+// *************************** start index ************************
+header.co-header
+    .co-carousel
+        .carousel-header
+            padding-left: 0px
+            margin-bottom: 0px
+            .co-list-carousel
+
+.co-2
+    background: url($img+'Icons-BG.jpg')
+    background-size: cover
+    padding: 85px 0px
+    .co-main-list-links
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        justify-content: center
+        align-items: center
+        list-style: none
+        padding-left: 0px
+    .co-list-links
+        width: 20%
+        @media screen and ( max-width:  $lg)
+            width: 25%
+        @media screen and ( max-width:  $md)
+            width: 33.3%
+        @media screen and ( max-width:  $sm)
+            width: 50%
+        @media screen and ( max-width:  $xxs)
+            width: 100%
+            
+        .co-links
+            margin: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            color: white
+            text-decoration: none
+            text-transform: uppercase
+            font-weight: 600
+            margin-bottom: 52px
+            img
+                height: 100%
+                max-width: 100%
+            .para
+                margin-top: 17px
+    
+.co-3
+    padding: 55px 0px
+    background: $color-gray
+    .co-main
+        .co-heading
+            font-weight: bold
+            text-align: center
+        .para
+
+.co-4
+    padding: 55px 0px
+    // background: gray
+    .co-left
+        @media screen and ( max-width:  $sm)
+            margin-bottom: 100px
+        .co-heading
+            text-align: center
+        .co-img#hotspotImg
+            background: transparent
+            .hot-spot
+                background-color: $color-red
+                .tooltip
+                    top: initial
+                    bottom: 40px
+                    width: 280px
+                    background-color: $color-red+AA
+    .co-right
+        .co-heading
+        .carousel-mo-2
+            padding-left: 0px
+            
+            .co-list-link
+                .card
+                    text-decoration: none
+                    .card-img-top
+                    .card-body
+                        position: absolute
+                        bottom: 0px
+                        left: 0px
+                        width: 100%
+                        background: $color-red
+                        color: white
+                        text-align: center
+                        .card-title
+                            font-size: 27px
+                            margin-bottom: 0px
+                            @media screen and ( max-width:  $sm)
+                                font-size: 21px
+// *************************** end index ************************
+
+
+// *************************** start about us **************************
+
+.au-company-history
+    background: $color-gray
+    padding: 100px 0px
+    .co-heading
+        margin-bottom: 60px
+    .sub-co
+        .para-1
+            font-weight: bold
+        .para-2
+    .co-img
+
+.au-our-vision
+    padding: 60px
+    background: url($img+'bg_icon/Vision-Shape.png') center center no-repeat
+    // background-size: container
+    .sub-co
+        .co-heading
+        .para
+
+.au-our-mission
+    padding: 60px
+    background: url($img+'bg_icon/Our-Mission-Shape.png') center center no-repeat
+    background-size: 100% 100%
+    color: white
+    .sub-co
+        .co-heading
+        .para
+            margin-bottom: 0px
+
+.au-core-values
+    padding: 70px 0px
+    .co-heading
+        margin-bottom: 50px
+    .co-item
+        background-color: $color-gray
+        display: flex
+        margin-bottom: 10px
+        .co-img
+            width: 100px
+        .co-content
+            flex: 1
+            font-size: 13px
+            padding: 15px
+            .para-1
+                margin-bottom: 0px
+                font-weight: bold
+                color: $color-red
+            .para-2
+                margin-bottom: 0px
+
+// *************************** end about us **************************
+
+
+
+// *************************** start clients **************************
+.cl-clients
+    padding: 30px 0px
+    .co-main
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .co-img
+            height: 70px
+            margin: 10px 20px
+            img
+                max-width: 100%
+// *************************** end clients **************************
+
+
+// *************************** start portfolio **************************
+.nav-portfolio
+    background: $color-gray
+    justify-content: center
+    padding: 9px 60px
+    padding-top: 20px
+    border-bottom: 1px solid #bcbcbc
+    @media screen and ( max-width: $md)        
+        padding: 9px 0px
+        font-size: 14px
+    @media screen and ( max-width: $sm)
+        font-size: 12px
+    .nav-item   
+        border-right: 1px solid $color-dark-gray
+        &:last-of-type
+            border-right: none !important
+        &.active
+            border-right: 1px solid $color-red
+            .nav-link
+                color: $color-red
+        .nav-link
+            color: $color-dark-gray
+            border: none
+            outline: none !important
+            
+
+
+.portfolio-co-cards
+    padding: 30px 0px
+// *************************** end portfolio **************************
+
+
+// *************************** start our team ************************
+.co-our-team-1
+    padding: 60px 0px
+    background: $color-gray
+    .co-left
+        @media screen and ( max-width: $md)
+            margin-bottom: 40px
+    .co-right
+        .para-1
+            margin-bottom: 0px
+        .para-2
+.co-our-team-2
+    padding: 60px 0px
+    .card.mo-com-1
+        margin-bottom: 30px
+// *************************** end our team **************************
+
+
+// *************************** start career ************************
+
+
+
+
+.co-career-2
+    padding: 100px 0px
+    color: white
+    background: url($img+'carrer-header.jpg')
+    background-size: cover
+    form
+        background: rgba(0,0,0,0.1)
+        padding: 20px
+        box-shadow: 1px 1px 5px 0px #2b2b2b
+        input
+            background-color: rgba(0,0,0,0.2) !important
+            border: 1px solid #747475
+            &[type=submit]
+                background: linear-gradient(to bottom, #17A2B8, #0d505a)
+                border: none
+                box-shadow: 1px 1px 5px 0px grey
+            &::placeholder
+                color: #bdbdbd
+        label
+            color: black
+
+.co-main-contact-last
+    padding: 60px 0px
+    form
+        // [class *=col-]
+        //     margin-bottom: 300px
+        .para
+            margin-bottom: 40px
+            font-size: 14px
+            color: $color-dark-gray
+        label
+            span
+                color: $color-red
+        input
+            margin-bottom: 30px !important
+            &[type=submit]
+                background: $color-red
+                font-size: 13px
+                color: white
+                padding: 15px 50px
+                border: none
+                outline: none !important
+                border-radius: 4px
+        textarea
+            margin-bottom: 30px !important
+
+// *************************** end career ************************
+
+
+// *************************** start contact ************************
+// ---------
+// *************************** end contact ************************
+    
+
+
+// *************************** start project ************************
+.co-main-project
+    padding: 60px 0px
+    .co-main-title
+        font-size: 29px
+        color: $color-red
+        text-align: center
+        margin-bottom: 40px
+        font-weight: 400
+    .co-carousel-project
+        .co-img
+    .co-right
+        .co-content
+            display: flex
+            font-size: 14px
+            margin-bottom: 5px
+            .co-title
+                flex: 1
+                font-weight: bold
+                font-size: 16px
+                margin-bottom: 0px
+            .co-text
+                flex: 3
+                p
+                    margin-bottom: 0px
+                ul
+                    padding-left: 1rem
+                    margin-bottom: 0px
+                    
+                    
+
+// *************************** end project ************************
+
+
+
+// ****************** start services / what-we-do *****************
+
+.what-we-do-1
+    padding: 60px 0px
+    .co-img
+        width: 500px
+        max-width: 100%
+        margin: auto
+        margin-bottom: 50px
+    .co-content
+        background-repeat:  no-repeat
+        background-position: center center
+        padding: 70px 0px
+        min-height: 100vh
+        p
+            margin-bottom: 0px
+.what-we-do-2
+
+// ****************** end services / what-we-do *****************
+
+
+footer
+    background: $color-black
+    color: white
+    padding: 60px 0px 
+    .co-title
+        font-size: 22px
+        font-weight: bold
+    .co-sub-title
+        font-size: 18px
+        font-weight: bold
+        margin-top: 30px
+    .co-para
+        margin-bottom: 0px
+        font-size: 14px
+    .co-main-bottom
+        text-align: center
+        margin-top: 30px
+    .co-left
+        .co-sub-top
+            display: flex
+            align-items: flex-start
+            @media screen and ( max-width: $md)
+                flex-direction: column
+                
+            .co-img
+                width: 190px
+                margin-right: 30px
+                max-width: 100%
+                @media screen and ( max-width: $md)
+                    margin-bottom: 30px
+            .co-content
+                flex: 1
+                .co-title
+                .co-para
+        .co-sub-bottom
+            margin-top: 70px
+            @media screen and ( max-width: $sm)
+                margin-top: 20px
+                margin-bottom: 40px
+            // @media screen and ( max-width: $md)
+            //     margin-top: 20px
+            //     display: flex
+            //     align-items: center
+            //     margin-bottom: 70px
+            .co-title
+                // @media screen and ( max-width: $md)
+                //     margin-right: 20px
+            .co-main-list-links
+                display: flex
+                padding-left: 0px
+                list-style: none
+                margin-bottom: 0px
+                .co-list-links
+                    .co-links
+                        color: white
+                        font-size: 26px
+                        margin-right: 10px
+            

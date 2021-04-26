@@ -1,0 +1,15 @@
+extends includes/layout.pug
+block content
+  +moCom2('COME WORK WITH US.','We\'re looking for great calibers to join our growing team.','carrer-header.jpg')
+  section(class="co-career-2")
+    .container
+      form(action="#") 
+        input(type="text" class="form-control mb-3" placeholder="Name")
+        input(type="emial" class="form-control mb-3" placeholder="Email")
+        input(type="text" class="form-control mb-3" placeholder="Job Title")
+        input(type="text" class="form-control mb-3" placeholder="Full Time")
+        label(for="upload-cv" class="form-label")
+          | Upload Your CV
+        input(type="file" class="form-control mb-3")
+        input(type="submit" value="Send" class="btn btn-primary ")
+

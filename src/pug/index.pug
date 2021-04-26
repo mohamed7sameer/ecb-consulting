@@ -1,0 +1,106 @@
+extends includes/layout.pug
+block content
+
+  header.co-header
+    div.co-carousel
+      ul.carousel-header
+        -
+          let carouselImg=[
+            'AVIT-1.jpg',
+            'Bogota-Resort.jpg',
+            'Maadi-Complex-we-will-add-it-on-slider.jpg',
+            'MIP-VINCI.png','MOJ-Fayed-Courthouse.jpg'
+          ]
+        each val in carouselImg
+          li.co-list-carousel
+            img.w-100(src=img+"carousel/"+val, alt="")
+      
+  section.co-2
+    .container
+      -
+        let sectorImgs = [
+          ['Administrative.png','Administrative'],
+          ['Commercial.png','Commercial'],
+          ['Educational.png','Educational'],
+          ['Hospitality.png','Hospitality'],
+          ['Industrial.png','Industrial'],
+          ['Infrastructure.png','Infrastructure'],
+          ['Medical.png','Medical'],
+          ['Mixed-Use.png','Mixed-Use'],
+          ['Residential.png','Residential'],
+          ['Transportation.png','Transportati']
+        ]
+      ul.co-main-list-links
+        each val in sectorImgs
+          li.co-list-links
+            a(href="#").co-links
+              img(src=`${img}sectors/${val[0]}`, alt="")
+              span.para(class="content-anchor")=val[1]
+  section(class="co-3")
+    .container 
+      div.co-main
+        h3.co-heading.main-heading
+          | Welcome to ECB
+        p.para
+          | ECB is a multidisciplinary engineering & consultancy firm equipped with a cutting-edge platform and an exceptional track record in the consultancy industry. Our in-depth knowledge of Egypt’s distinct market features, diversified international exposure, and highly experienced, client-oriented culture sets us apart in fulfilling our clients’ need in all the sectors that we serve.
+  
+  section(class="co-4")
+    .container 
+      .row
+        - varCol = 'col-md-6'
+        div(class=varCol)
+          div.co-left
+            h3.co-heading.main-heading
+              | Find our offices
+            .co-img#hotspotImg
+              img.img-responsive(src=img+"Map.png", alt="")
+              -
+                let pointsHotSpot = [
+                  [75,290],
+                  [30,250],
+                  [45,350]
+                ]
+              each val in pointsHotSpot
+                .hot-spot(y=val[0], x=val[1])
+                  .circle
+                  .tooltip
+                    .text-row
+                      p
+                        | ECB UK: 254 Goldhawk Rd, London W12 9PE, UK
+        div(class=varCol)
+          div.co-right
+            h3.co-heading.main-heading
+              | Latest Projects
+            ul.carousel-mo-2
+              -
+                let carouselImg2=[
+                  ['1-Project-Cover-11.png','project.html','Capital Heights 1'],
+                  ['1-Project-Cover-16.png','project.html','Capital Heights 2'],
+                  ['1-Project-Cover-24.png','project.html','Bogota'],
+                  ['1-Project-Cover-35.png','project.html','Suez Medical Complex'],
+                  ['1-Project-Cover-36.png','project.html','IL Bosco City'],
+                  ['1-Project-Cover-37.png','project.html','IL Bosco'],
+                  ['1-Project-Cover-38.png','project.html','VINCI'],
+                  ['1-Project-Cover-41.png','project.html','Cairo Festival City “Oriana Villas”'],
+                  ['1-Project-Cover-49.png','project.html','Sun Capital'],
+                  ['1-Project-Cover-51.png','project.html','Lagoon Compound “North Coast”'],
+                  ['1-Project-Cover-53.png','project.html','Golden Yard “Marseilia”'],
+                  ['1-Project-Cover-55.png','project.html','Kafr El Sheikh Hotel'],
+                  ['Project-Cover-2.jpg',   'project.html','Safari Beach Resort']
+                ]
+              each val in carouselImg2
+                li.co-list-link
+                  //- a.co-link(href=val[1])
+                  //-   img.w-100(src=img+"carousel2/"+val[0], alt="")
+                  a.card(href=val[1])
+                    img.card-img-top(src=img+"carousel2/"+val[0], alt="...")
+                    .card-body
+                      h5.card-title=val[2]
+
+
+
+
+block append scripts
+  script.
+    index()
+  

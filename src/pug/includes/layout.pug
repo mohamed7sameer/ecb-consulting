@@ -1,0 +1,20 @@
+include mixin.pug
+include mixin_layout.pug
+block var
+doctype html
+html(lang="en")
+  head
+    +metaLayout
+    title
+        block title
+            | Document
+    block styles
+      +linksLayout
+  body 
+    +navLayout
+    block content
+    +footerLayout
+
+    block scripts
+      +scriptsLayout
+

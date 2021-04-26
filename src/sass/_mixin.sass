@@ -1,0 +1,223 @@
+
+@import "_variable.sass"
+
+*
+    box-sizing: border-box
+
+body
+    font-family: axi-forma
+
+
+
+
+.main-heading
+    color: $color-red
+    font-weight: bold    
+.slick-arrow
+    position: absolute
+    z-index: 1
+    top: 50%
+    transform: translateY(-50%)
+    outline: none !important
+    border: none !important
+    background: rgba(61, 52, 52, 0.4)
+    width: 45px
+    height: 45px
+    border-radius: 2px
+    color: white
+    &.slick-prev
+        left: 10px
+    &.slick-next
+        right: 10px
+.slick-dots
+    display: flex
+    list-style: none
+    padding-left: 0px
+    justify-content: center
+    align-items: center
+    li
+        button
+            display: inline-block
+            color: transparent
+            font-size: 0px
+            width: 15px
+            height: 15px
+            border: none
+            outline: none !important
+            margin: 0px 5px
+            border-radius: 50%
+            background: $color-red !important
+        &.slick-active
+            button
+                background: $color-gray !important
+                border: 1px solid $color-border
+
+
+
+.mo-glob-card-project
+    display: block
+    text-decoration: none
+    .card-img-top
+        // min-height: 200px
+    .card-body
+        bottom: 0px 
+        width: 100%
+        background: $color-red
+        text-align: center
+        .card-title
+            margin-bottom: 0px
+            color: white
+    .para-location
+        position: absolute
+        top: 26px
+        right: 0px
+        background: $color-red
+        color: white
+        padding: 4px
+
+// *************************** start component ************************
+
+.emoji
+    display: inline-block
+    width: 16px
+    margin-right: 10px
+
+.mo-com-1.card
+    img.card-img-top
+    .card-body
+        position: absolute
+        bottom: 0px
+        background: $color-red
+        width: 100%
+        color: white
+        text-align: center
+        
+        .card-title
+            font-size: 16px
+            font-weight: bold
+            margin-bottom: 0px
+        .card-text
+            font-weight: 400
+
+
+
+#scrollUp 
+    bottom: 20px
+    right: 20px
+    // padding: 10px 20px
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    background-color: #555555a4
+    color: #fff
+    transition: all .5s linear
+    &:hover
+        background: $color-red
+
+
+
+
+::-webkit-scrollbar 
+    -webkit-appearance: none
+
+::-webkit-scrollbar:vertical 
+    width: 12px
+
+::-webkit-scrollbar:horizontal 
+    height: 12px
+
+::-webkit-scrollbar-thumb 
+    background-color: rgba(0, 0, 0, .5)
+    border-radius: 10px
+    border: 2px solid #ffffff
+
+::-webkit-scrollbar-track 
+    border-radius: 10px
+    background-color: #ffffff
+
+
+
+
+
+
+.mo-com-2
+    padding: 100px 0px
+    padding-top: 150px
+    color: white
+    position: relative
+    @media screen and ( max-width: $sm)
+        text-align: center
+        
+    .co-heading
+    .para
+        font-size: 17px
+    .co-link-arrow
+        position: absolute
+        bottom: 2px
+        left: 50%
+        transform: translateX(-50%)
+        color: white
+        font-size: 30px
+
+
+
+
+
+.mo-com-3
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url($img+'wood-dark.png')
+    padding: 60px 0px
+    color: white
+    @media screen and ( max-width: $sm)
+        text-align: center
+    .co-heading
+    .para
+        margin-bottom: 0px
+
+
+.mo-com-4
+    padding: 60px 0px
+    &.mo-reverse
+        background: $color-gray
+        border-top: 1px solid $color-border
+        border-bottom: 1px solid $color-border
+        &>.container>.row
+            flex-direction: row-reverse
+        .co-mian-info
+            padding-left: 0px
+            padding-right: 30px
+    .co-heading
+        font-weight: bold
+    .co-map
+    .co-mian-info
+        margin-top: 40px
+        padding-left: 30px
+        .co-info
+            display: flex
+            margin-bottom: 15px
+            .co-ico
+                display: flex
+                width: 50px
+                height: 50px
+                border-radius: 50%
+                background: $color-red
+                justify-content: center
+                align-items: center
+                color: white
+                font-size: 24px
+                margin-right: 20px
+            .co-content
+                flex: 1
+                margin-top: 15px
+                .para
+                    font-size: 14px
+
+// *************************** end component ************************
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+extends includes/layout.pug
+block content
+  section(class='au-company-history')
+    .container 
+        h2.co-heading.text-center.main-heading
+          | Company History
+        .row
+          - varCol = 'col-md-6'
+          div(class=varCol)
+            .sub-co
+              p.para-1
+                | 1997 – Establishing ECB  <br>
+                | 2015 – Rebranding  ECB – Engineering Consulting Bureau <br>
+                | 2017 – Establishing ECB – KSA (Jeddah Office) <br>
+                | 2019 – Establishing ECB – UK (London Office) <br>
+              p.para-2
+                | Since 1997 and up till now ECB evolved to be an engineering & consultancy firm equipped with a cutting-edge multidisciplinary platform and an exceptional track record in the consultancy industry.
+              p.para-2
+                | Our in-depth knowledge of Egypt’s distinct market features, diversified international exposure, and highly experienced, client-oriented culture sets us apart in fulfilling our clients’ need in all the sectors that we serve.
+              p.para-2
+                | ECB Management System in Design, Site Supervision and project management meet the requirements of ISO 9001:2015
+          div(class=varCol)
+            .co-img
+              img.w-100(src=img+"Numbers.png", alt="")
+
+  section(class='au-our-vision')
+    .container
+      .sub-co
+        h2.co-heading.text-center.main-heading
+          | Our Vision
+        p.para
+          | ECB aspires to a leading market position and to be the first project management and consultancy provider in the region.
+          | We aim to establish long-term partnerships with our clients, anticipating immediate needs and future concerns, and
+          | providing engineering solutions that have often exceeded expectations.
+          | With the latest design/construction international and local codes and standards across our extensive project portfolio.
+      
+
+  section(class='au-our-mission')
+    .container
+      .sub-co
+        h2.co-heading.text-center
+          | Our Mission
+        p.para
+          | Our mission is to add value to our clients’ projects through a wide range of engineering and consultancy services within the following:
+        p.para
+          +moCompArrow
+          | Deliver our services according the highest international and regional standards for clients across the project’s life cycle.
+        p.para
+          +moCompArrow
+          | Deliver on time and continuously develop our services within an integrated work approach in value engineering & sustainability and risk management… etc. in our project.
+        p.para
+          +moCompArrow
+          | Our dedicated team understands the need of our clients and work actively to support them with a wide spectrum of engineering and project management and consultancy services.
+
+
+  section(class='au-core-values')
+    .container 
+      h2.co-heading.text-center.main-heading
+        | Core Values
+      .row
+        
+        each val in corValues
+          - varCol="col-lg-6"
+          div(class=varCol)
+            .co-item
+              .co-img
+                img.w-100(src=`${img}core_values/${val[2]}`, alt="")
+              .co-content
+                p.para-1=val[0]
+                p.para-2=val[1]
+
+        
+
+

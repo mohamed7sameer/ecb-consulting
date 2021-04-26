@@ -1,0 +1,50 @@
+extends includes/layout.pug
+block content
+  +moCom2('CONTACT US','Identify your professional team to deliver your project.','contact-us-header.jpg')
+  +moCom3('OUR OFFICES','We operate from offices to support your projects.')
+
+  +moCom4('ECB EGYPT',contactInfo1)
+  +moCom4('ECB EGYPT',contactInfo2,'mo-reverse')
+  +moCom4('ECB EGYPT',contactInfo3)
+
+  +moCom3('CONTACT FORM','We would love to be involved with your next project')
+
+  section(class="co-main-contact-last")
+    .container
+      form(action="") 
+        p.para
+          | For more information or to get in touch regarding your new scheme, please used the form below.
+        .row
+          -varCol = 'col-sm-4'
+          div(class=varCol)
+            label(class="form-label" for='name')
+              | Name
+              span
+                | *
+            input(type="text" id="name" class="form-control")
+          div(class=varCol)
+            label(class="form-label" for="email")
+              | Email
+              span
+                | *
+            input(type="email" id="email" class="form-control")
+          div(class=varCol)
+            label(class="form-label" for="subject")
+              | subject
+              span
+                | *
+            input(type="text" id="subject" class="form-control")
+          .col-12
+            label(class="form-label" for="message")
+              | Message
+              span
+                | *
+            textarea(class="form-control" rows="10" id="message") 
+          .col-12
+            input(type="submit" value="submit")
+
+
+
+
+
+

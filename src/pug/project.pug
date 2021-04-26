@@ -1,0 +1,26 @@
+extends includes/layout.pug
+block content
+  section(class="co-main-project")
+    .container
+        h2.co-main-title
+            | SAFARI BEACH RESORT - MARSA ALAM
+        .row
+            .col-lg-7
+                .co-carousel-project
+                    - let carouselProject = ['1-Project-Cover-25.png','1-Project-Cover-45.png','1-Project-Cover-47.png']
+                    each val in carouselProject
+                        .co-img
+                            img.w-100(src=img+"projects/"+val, alt="")
+            .col-lg-5
+                .co-right
+                    each val in projectContent
+                        .co-content
+                            h4.co-title=val[0]
+                            .co-text!=val[1]
+        .text-center
+            a(href="javascript:history.back()" class="btn btn-danger")
+                |Go Back
+		
+block append scripts
+    script.
+        project()

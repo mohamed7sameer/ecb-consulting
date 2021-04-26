@@ -1,0 +1,31 @@
+extends includes/layout.pug
+block content
+  section(class="co-our-team-1")
+    .container
+      .row
+        .col-lg-4
+          .co-left
+            +moCom1('Pic.png','Dr. Mohamed Abd-Elghany','Founder&CEO')
+        .col-lg-8
+          .co-right
+            p.para-1
+              b
+                | Message From CEO
+            p.para-2
+              | Passionately striving to be one of the leading engineering consultancy firms who provide integrated engineering solutions in Middle East & Africa. Our sincere endeavors are to provide high quality engineering services matching the international standards based on the most updated techniques. Believing that projects delivery with highest quality & standards is our gate to success. Our success is represented in the exemplary client’s retention. We consider this as our main goal as it is a sign of achieving client satisfaction and performing the required service with integrity, fairness & quality. Proud that our organization maintain highly qualified professional calibers for long time who participate in building our success story.
+
+  section(class="co-our-team-2")
+    .container
+      .row
+        -
+          listCrm = [
+            ['1-Eng.-Ayman-El-Hadary-Partner-Technical-Director.png','Eng. Ayman El Hadary','Partner<br>Technical Director'],
+            ['2-Eng.-Walid-Fahmy-Project-Management-Department-Director.png','Eng. Walid Fahmy','Project Management Department<br>Director'],
+            ['3-Eng.-Ehab-Abul-Azm-Site-Supervision-Department-Director.png','Eng. Ehab Abul Azm','Site Supervision Department<br>Director'],
+            ['01-Eng.-Tarek-Abdel-Hakam-Health-Projects-Director.png','Eng. Tarek Abdel Hakam','Health Projects Director'],
+            ['02-Eng.-Mostafa-Abdel-Ghany-Projects-Manager.png','Eng. Mostafa Abdel Ghany','Project Manager'],
+            ['03-Eng.-Taha-Osman-Project-Manager.png','Eng. Taha Osman','Project Manager']
+          ]
+        each val in listCrm
+          .col-lg-4.col-md-6
+            +moCom1(val[0],val[1],val[2])

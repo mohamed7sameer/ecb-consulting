@@ -1,0 +1,127 @@
+mixin metaLayout
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+mixin linksLayout
+    link(rel="stylesheet", href="/css/libs/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/libs/all.min.css")
+    link(rel="stylesheet", href="/css/libs/slick.css")
+    link(rel="stylesheet", href="/css/style.css")
+
+mixin navLayout
+    nav.navbar.navbar-expand-lg.navbar-light#top-nav
+      .container
+        a.navbar-brand(href="#")
+          img.w-100(src=img+"ECB-Logo-PNG.png", alt="")
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current="page", href="/") Home
+            li.nav-item
+              a.nav-link(href="/aboutus.html") About Us
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")                
+                | What We Do  
+              ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                - let pathWhatWeD = '/whatwedo/'
+                li
+                  a.dropdown-item(href=pathWhatWeD+"project_management.html") Project Management
+                li
+                  a.dropdown-item(href=pathWhatWeD+"design_services.html") Design Services
+                li
+                  a.dropdown-item(href=pathWhatWeD+"site_supervision.html") Site Supervision
+                li
+                  a.dropdown-item(href=pathWhatWeD+"value_engineering.html") Value Engineering
+                li
+                  a.dropdown-item(href=pathWhatWeD+"leed_consultancy.html") LEED Consultancy
+                li
+                  a.dropdown-item(href=pathWhatWeD+"real_estate_appraisal.html") Real-Estate Appraisal
+                li
+                  a.dropdown-item(href=pathWhatWeD+"feasibility_studies.html") Feasibility Studies
+                li
+                  a.dropdown-item(href=pathWhatWeD+"client_representation.html") Client Representation
+                li
+                  a.dropdown-item(href=pathWhatWeD+"fire_engineering.html") Fire Engineering
+                li
+                  a.dropdown-item(href=pathWhatWeD+"facade_engineering.html") Facade Engineering
+            li.nav-item
+              a.nav-link(href="/clients.html") CLients
+            li.nav-item
+              a.nav-link(href="/portfolio.html") Portfolio
+            li.nav-item
+              a.nav-link(href="/ourteam.html") Our Team
+            li.nav-item
+              a.nav-link(href="/career.html") Careers
+            li.nav-item
+              a.nav-link(href="/contact.html") Contact
+
+mixin footerLayout
+    footer
+        .container 
+          .row
+            -varCol = 'col-sm-6'
+            div(class=varCol)
+              div.co-left
+                div.co-sub-top
+                  div.co-img
+                    img.w-100(src=img+"LOGOb.png", alt="")
+                  div.co-content
+                    h3.co-title
+                      | ABOUT ECB
+                    p.co-para
+                      | ECB is a multidisciplinary engineering & consultancy firm equipped with a cutting-edge platform Read more
+                div.co-sub-bottom
+                  h3.co-title
+                    | Follow Us
+                  ul.co-main-list-links
+                    li.co-list-links
+                      a.co-links(href="#")
+                        <i class="fab fa-facebook"></i>
+                    li.co-list-links
+                      a.co-links(href="#")
+                        <i class="fab fa-linkedin-in"></i>   
+            div(class=varCol)
+              div.co-right
+                h3.co-title
+                  | OFFICES
+                h5.co-sub-title
+                  | ECB EGYPT
+                p.co-para
+                  b Address: 
+                  span 2 Al Imam Abu Hanifa, 7th Avenue, Nasr City, Cairo, Egypt
+                p.co-para
+                  b Mail: 
+                  span Info@ecb-consulting.com
+                p.co-para
+                  b Phone: 
+                  span +202 2401 3225
+                p.co-para
+                  b Fax: 
+                  span +202 2401 3226
+                h5.co-sub-title
+                  | ECB UK
+                p.co-para
+                  b Address: 
+                  span 254 Goldhawk Rd, London W12 9PE, UK
+                h5.co-sub-title
+                  | ECB KSA
+                p.co-para
+                  b Address: 
+                  span Prince Sultan Road, Jeddah, Saudi Arabia
+
+
+
+          p.co-main-bottom
+            | Made By Pharaohs Tech
+
+
+mixin scriptsLayout
+    script(src="/js/libs/bootstrap.bundle.min.js") 
+    script(src="/js/libs/jquery-3.6.0.min.js") 
+    script(src="/js/libs/slick.min.js") 
+    script(src="/js/libs/jquery.hotspot.js")
+    script(src="/js/libs/jquery.scrollUp.min.js")    
+    script(src="/js/scripts.js")

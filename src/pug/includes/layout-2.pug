@@ -1,0 +1,52 @@
+include mixin.pug
+include mixin_layout.pug
+block var
+    -
+      let serviceVarable = [
+          '',
+          '',
+          0
+      ]
+doctype html
+html(lang="en")
+  head
+    +metaLayout
+    title
+        block title
+            | Document
+    block styles
+      +linksLayout
+  body 
+    +navLayout
+    
+    section(class='what-we-do-1')
+        .container 
+            .co-img
+                img.w-100(src=img+"whatwedo/"+serviceVarable[0], alt="")
+            
+            .co-content(style=`background-image: url('${img}/whatwedo/${serviceVarable[1]}')`)
+                block content
+
+    section(class="what-we-do-2")
+        .container
+            .row
+                each val,index in dataPortfolio
+                    if index < serviceVarable[2]
+                        +moCom5(
+                          val.title,
+                          val.location,
+                          val.img,
+                          '#',
+                          '',
+                          ''
+                        )
+
+
+
+    +footerLayout
+
+    block scripts
+      +scriptsLayout
+
+
+
